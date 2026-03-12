@@ -1,23 +1,140 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Portfolio</title>
-<style>
-body {
-margin:0;
-background:black;
-}
-iframe {
-width:100%;
-height:100vh;
-border:none;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoval Ben Sher Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #d9d9d9;
+      color: #24344d;
+    }
+
+    .wrapper {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 40px 24px 60px;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: 42px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .hero p {
+      margin: 10px 0 0;
+      font-size: 16px;
+      color: #4a5d7a;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 24px 0 32px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      transition: 0.2s ease;
+    }
+
+    .button-primary {
+      background: #2f435f;
+      color: white;
+    }
+
+    .button-primary:hover {
+      background: #24344d;
+    }
+
+    .button-secondary {
+      background: white;
+      color: #2f435f;
+      border: 1px solid #bfc7d1;
+    }
+
+    .button-secondary:hover {
+      background: #f3f4f6;
+    }
+
+    .viewer-box {
+      background: #efefef;
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    }
+
+    iframe {
+      width: 100%;
+      height: 88vh;
+      border: none;
+      border-radius: 8px;
+      background: white;
+    }
+
+    .fallback {
+      text-align: center;
+      margin-top: 18px;
+      font-size: 14px;
+      color: #4a5d7a;
+    }
+
+    .fallback a {
+      color: #24344d;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 30px;
+      }
+
+      iframe {
+        height: 75vh;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <div class="wrapper">
+    <div class="hero">
+      <h1>SHOVAL BEN SHER</h1>
+      <p>Architecture Portfolio 2025–2026</p>
+    </div>
 
-<iframe src="portfolio.pdf"></iframe>
+    <div class="actions">
+      <a class="button button-primary" href="portfolio.pdf" target="_blank">Open Portfolio</a>
+      <a class="button button-secondary" href="portfolio.pdf" download>Download PDF</a>
+    </div>
 
+    <div class="viewer-box">
+      <iframe src="portfolio.pdf#view=FitH"></iframe>
+      <div class="fallback">
+        If the portfolio does not display correctly, open it directly
+        <a href="portfolio.pdf" target="_blank">here</a>.
+      </div>
+    </div>
+  </div>
 </body>
 </html>
